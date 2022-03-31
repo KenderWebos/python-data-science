@@ -1,0 +1,14 @@
+> vincular github con git
+
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+
+> abrir un archivo y leer su contenido
+
+f = open("El_Arbol_De_La_Colina.txt")
+dato = f.readline(1)
+linea = f.readline()
+while linea != "":
+    print(linea)
+    linea = f.readline()
+print(dato)
