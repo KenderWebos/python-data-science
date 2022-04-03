@@ -12,3 +12,5 @@ while linea != "":
     print(linea)
     linea = f.readline()
 print(dato)
+
+el proyecto se entrega el lunes
