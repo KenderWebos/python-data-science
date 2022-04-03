@@ -2,7 +2,9 @@ import os
 
 def main():
     menu()
-    textoPrincipal = "Hola Hola mi nombre es kevin"
+    textoPrincipal = open("../Testing/Libros_txt_utf-8/El_Arbol_De_La_Colina.txt")
+    makeSpace()
+    #textoPrincipal = "Hola Hola mi nombre es kevin"
     print(get_cantidadDeLineas(textoPrincipal))
     print(get_cantidadDePalabras(textoPrincipal))
     print(get_cantidadDePalabrasNoRepetidas(textoPrincipal))
@@ -34,6 +36,7 @@ número de palabras no repetidas, OK
 numero de caracteres con espacio, OK
 número de caracteres sin espacio. OK
 """
+
 def makeSpace():
     print("--------------------------------------------------------------------------------")
 
@@ -81,6 +84,7 @@ def menu():
     print("-----Bienvenido al menu de opciones-----")
     while(True):
         response = input("Que deseas hacer? \n 1.- Ver cantidad de lineas \n 2.- Ver cantidad de palabras \n 3.- Ver cantidad de palabras no repetidas \n 4.- Ver cantidad de caracteres con espacio \n 5.- Ver cantidad de caracteres sin espacio \n 6.- Ver cantidad de veces que se repite una palabra \n 7.- Cambiar una palabra en un texto \n 8.- Salir \n")
+        os.system("cls")
         if(response == "1"):
             print("seleccionaste la opcion 1")
 
