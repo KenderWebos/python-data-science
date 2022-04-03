@@ -2,41 +2,44 @@ import os
 
 def main():
     menu()
-    textoPrincipal = open("../Testing/Libros_txt_utf-8/El_Arbol_De_La_Colina.txt")
-    makeSpace()
-    #textoPrincipal = "Hola Hola mi nombre es kevin"
-    print(get_cantidadDeLineas(textoPrincipal))
-    print(get_cantidadDePalabras(textoPrincipal))
-    print(get_cantidadDePalabrasNoRepetidas(textoPrincipal))
-    print(get_cantidadDeCaracteresConEspacio(textoPrincipal))
-    print(get_cantidadDeCaracteresSinEspacio(textoPrincipal))
-    makeSpace()
-    print(get_cantidadDeVecesQueSeRepitioUnaPalabra("Hola", textoPrincipal))
-    print(changeWordInText("kevin", "pablo", textoPrincipal))
     
-# def get_info():
-#     #mainText = open('C:\Users\pc0128\Downloads\El_Arbol_De_La_Colina.txt')
-#     #type El_Arbol_De_La_Colina.txt | find /v /c ""
+    textoPrincipal = "hola hola mi nombre es kevin"
 
-#     mainText = input("agrega tu texto: \n")
-#     allWords = mainText.split(" ")
-#     print(f"la cantidad de palabras es {len(allWords)}")
-#     conjuntoDePalabras = set(allWords)
-#     print(f"la cantidad de palabras no repetidas es {len(conjuntoDePalabras)}")
+    #Creamos y almacenamos los textos en una lista
+    mainTextList = list()
+    path = "tarea_1/archivosDeTesteo/Libros_txt_utf-8/"
+    mainTextList.append( open(path+"El_Arbol_De_La_Colina.txt").read() )
+    # mainTextList.append( open(path+"El_Caos_Reptante.txt").read() )
+    # mainTextList.append( open(path+"En_El_Mar_Remoto.txt").read() )
+    # mainTextList.append( open(path+"Lazarillo_de_Tormes.txt").read() )
+    # mainTextList.append( open(path+"Para_Leer_Al_Atardecer.txt").read() )
+    # mainTextList.append( open(path+"Una_corta_historia_del_eBook.txt").read() )
 
-#     print(f"la cantidad de palabras es {len(mainText)}")
+    # makeSpace()
+    # print(get_cantidadDeLineas(textoPrincipal))
+    # print(get_cantidadDePalabras(textoPrincipal))
+    # print(get_cantidadDePalabrasNoRepetidas(textoPrincipal))
+    # print(get_cantidadDeCaracteresConEspacio(textoPrincipal))
+    # print(get_cantidadDeCaracteresSinEspacio(textoPrincipal))
+    # makeSpace()
+    # print(get_cantidadDeVecesQueSeRepitioUnaPalabra("Hola", textoPrincipal))
+    # print(changeWordInText("kevin", "pablo", textoPrincipal))
 
-#     textoSinEspacio = mainText.replace(" ", "")
-#     print(f"la cantidad de palabras es {len(textoSinEspacio)}")
 
+# ｡☆✼★━━━━━━  TO DO  ━━━━━━★✼☆｡
 """
 número de líneas, OK
 número de palabras en total, OK
 número de palabras no repetidas, OK
 numero de caracteres con espacio, OK
 número de caracteres sin espacio. OK
+
+número de veces que se repite una palabra, OK
+
+cambiar una palabra en el texto, OK
 """
 
+# ｡☆✼★━━━━━━  FUNCIONES  ━━━━━━★✼☆｡
 def makeSpace():
     print("--------------------------------------------------------------------------------")
 
@@ -79,19 +82,52 @@ def changeWordInText(wordToChange, newWorld, mainText):
     a = mainText.replace(wordToChange, newWorld) #a =
     return a
 
+def limpiarTexto(text):
+    characters = ",;:.\n!\"'"
+    for character in characters:
+        text = text.replace(character, "")
+    return text
+
+def alert(text):
+    aux = "─"
+    fix = aux*(int(len(text)/2))
+    print(f"┌{fix*2} •✧✧• {fix*2}┐")
+    #print(f"-{fix}ALERTA{fix}- ")
+    print(f"    {fix + text + fix}")
+    print(f"└{fix*2} •✧✧• {fix*2}┘")
+    print("")
 
 def menu():
-    print("-----Bienvenido al menu de opciones-----")
+    
     while(True):
-        response = input("Que deseas hacer? \n 1.- Ver cantidad de lineas \n 2.- Ver cantidad de palabras \n 3.- Ver cantidad de palabras no repetidas \n 4.- Ver cantidad de caracteres con espacio \n 5.- Ver cantidad de caracteres sin espacio \n 6.- Ver cantidad de veces que se repite una palabra \n 7.- Cambiar una palabra en un texto \n 8.- Salir \n")
+        print("")
+        print("｡☆✼★━━━━━━  MENU DE OPCIONES  ━━━━━━★✼☆｡")
+        print("")
+        print("Que deseas hacer? \n 1.- Ver cantidad de lineas \n 2.- Ver cantidad de palabras \n 3.- Ver cantidad de palabras no repetidas \n 4.- Ver cantidad de caracteres con espacio \n 5.- Ver cantidad de caracteres sin espacio \n 6.- Ver cantidad de veces que se repite una palabra \n 7.- Cambiar una palabra en un texto \n 8.- Salir \n")
+        print("｡☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡")
+        print("")
+
+        alert("esta funcion puede mostrar textos de alerta para el usuario")
+        alert("me encanta esta funcion porque puedo mostrar contenido que se ve graficamente")
+        alert("pero tiene un pequeño bug")
+
+        response = input("Ingrese una opcion: ")
+
         os.system("cls")
         if(response == "1"):
             print("seleccionaste la opcion 1")
+            alert("esto ocurre cuando se realiza la funcion get_cantidadDeLineas")
 
         if(response == "8"):
             os.system("cls")
             return
-
+        response = input("quieres realizar otra accion? (si/no): ")
+        if(response == "si"):
+            os.system("cls")
+        else:
+            os.system("cls")
+            alert("Ejecucion terminada. Hasta luego")
+            return
 if __name__=="__main__":
     main()
 
