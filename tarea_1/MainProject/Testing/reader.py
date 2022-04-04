@@ -3,9 +3,14 @@
 # dir(var1)
 # print(var1)
 
-import os
+# import os
 
-textoPrincipal = open("../Testing/Libros_txt_utf-8/El_Arbol_De_La_Colina.txt")
-print(textoPrincipal.read())
+# textoPrincipal = open("../Testing/Libros_txt_utf-8/El_Arbol_De_La_Colina.txt")
+# print(textoPrincipal.read())
 
-os.system("pause")
+# os.system("pause")
+
+a = "hola como estamos"
+print(a)
+a = a.upper()
+print(a)

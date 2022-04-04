@@ -1,19 +1,16 @@
 import os
 
 def main():
-    menu()
+    #menu()
     
     textoPrincipal = "hola hola mi nombre es kevin"
 
     #Creamos y almacenamos los textos en una lista
+    pdf = "El_Arbol_De_La_Colina.txt"
     mainTextList = list()
     path = "tarea_1/archivosDeTesteo/Libros_txt_utf-8/"
-    mainTextList.append( open(path+"El_Arbol_De_La_Colina.txt").read() )
-    # mainTextList.append( open(path+"El_Caos_Reptante.txt").read() )
-    # mainTextList.append( open(path+"En_El_Mar_Remoto.txt").read() )
-    # mainTextList.append( open(path+"Lazarillo_de_Tormes.txt").read() )
-    # mainTextList.append( open(path+"Para_Leer_Al_Atardecer.txt").read() )
-    # mainTextList.append( open(path+"Una_corta_historia_del_eBook.txt").read() )
+    mainTextList.append( open(path+pdf).read() )
+    print(mainTextList)
 
     # makeSpace()
     # print(get_cantidadDeLineas(textoPrincipal))
@@ -87,6 +84,7 @@ def limpiarTexto(text):
     characters = ",;:.\n!\"'"
     for character in characters:
         text = text.replace(character, "")
+        text.upper()
     return text
 
 # def alert(text):
@@ -129,9 +127,14 @@ def menu():
             print("seleccionaste la opcion 1")
             alert("esto ocurre cuando se realiza la funcion get_cantidadDeLineas")
 
+        if(response == "2"):
+            print("seleccionaste la opcion 2")
+            alert("esto ocurre cuando se realiza la funcion get_cantidadDeLineas")    
+
         if(response == "8"):
             os.system("cls")
             return
+
         response = input("quieres realizar otra accion? (si/no): ")
         if(response == "si"):
             os.system("cls")
