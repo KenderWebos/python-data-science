@@ -1,4 +1,6 @@
+import imp
 import os
+import sys
 
 def main():
     #menu()
@@ -40,6 +42,17 @@ cambiar una palabra en el texto, OK
 def makeSpace():
     print("--------------------------------------------------------------------------------")
 
+def lectura_arg(p):
+    pdf = str(sys.argv[1])
+    print(p+pdf)
+    f = open(p+pdf)
+    dato = f.readline(1)
+    linea = f.readline()
+    while linea != "":
+        print(linea)
+        linea = f.readline()
+    print(dato)
+  
 def get_cantidadDeLineas(mainText):
     allLines = mainText.split("\n")
     return len(allLines)
