@@ -65,18 +65,19 @@ def get_cantidadDeCaracteresSinEspacio(mainText):
 
 def get_cantidadDeVecesQueSeRepitioUnaPalabra(wordToFind, mainText):
     
-    count = get_cantidadDePalabras(mainText)
-    a = mainText.replace(wordToFind,"")
+    conjunto = mainText.split(" ")
+    diccionarioDePalabras = dict()
 
-    print(a)
-    print(get_cantidadDePalabras(a))
+    for palabra in conjunto:
+        if palabra in diccionarioDePalabras:
+            diccionarioDePalabras[palabra] += 1
+        else:
+            diccionarioDePalabras[palabra] = 1
+
+    return (diccionarioDePalabras[wordToFind])
     
-    # count2 = get_cantidadDePalabras(textoSinLaPalabra)
-    # print( get_cantidadDePalabras(textoSinLaPalabra) )
-
     #hacer el substring por cada palabra
-    count = count
-    return count
+    #queriamos hacer que contara las palabras antes de quitar una en especifico y ver cuando da la resta
 
 def changeWordInText(wordToChange, newWorld, mainText):
     a = mainText.replace(wordToChange, newWorld) #a =
@@ -88,18 +89,28 @@ def limpiarTexto(text):
         text = text.replace(character, "")
     return text
 
+# def alert(text):
+#     aux = "─"
+#     fix = aux*(int(len(text)/2))
+#     print(f"┌{fix*2} •✧✧• {fix*2}┐")
+#     #print(f"-{fix}ALERTA{fix}- ")
+#     print(f"    {fix + text + fix}")
+#     print(f"└{fix*2} •✧✧• {fix*2}┘")
+#     print("")
+
 def alert(text):
     aux = "─"
     fix = aux*(int(len(text)/2))
-    print(f"┌{fix*2} •✧✧• {fix*2}┐")
+    print(f"┌{fix} •✧✧• {fix}┐")
     #print(f"-{fix}ALERTA{fix}- ")
-    print(f"    {fix + text + fix}")
-    print(f"└{fix*2} •✧✧• {fix*2}┘")
+    print(f"    { text }")
+    print(f"└{fix} •✧✧• {fix}┘")
     print("")
 
 def menu():
     
     while(True):
+        os.system("cls")
         print("")
         print("｡☆✼★━━━━━━  MENU DE OPCIONES  ━━━━━━★✼☆｡")
         print("")
@@ -128,6 +139,7 @@ def menu():
             os.system("cls")
             alert("Ejecucion terminada. Hasta luego")
             return
+
 if __name__=="__main__":
     main()
 
