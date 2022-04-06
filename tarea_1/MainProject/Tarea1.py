@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
-import imp
-import os
 import sys
+import os
 
 def main():
     #menu()
@@ -12,8 +11,10 @@ def main():
     pdf = "El_Arbol_De_La_Colina.txt"
     mainTextList = list()
     path = "../archivosDeTesteo/Libros_txt_utf-8/"
-    mainTextList.append( open(rutaFile()).read() )
+    ruta = rutaFile()
+    mainTextList.append( open(ruta).read() )
     print(mainTextList)
+    print(len(mainTextList))
 
     # makeSpace()
     # print(get_cantidadDeLineas(textoPrincipal))
@@ -42,13 +43,12 @@ cambiar una palabra en el texto, OK
 # ｡☆✼★━━━━━━  FUNCIONES  ━━━━━━★✼☆｡
 def makeSpace():
     print("--------------------------------------------------------------------------------")
-
+def contectFila():
+    pass
 def rutaFile():
     ruta= "../archivosDeTesteo/Libros_txt_utf-8/"
-
     doc = str(sys.argv[1])
     return ruta+doc
-    
   
 def get_cantidadDeLineas(mainText):
     allLines = mainText.split("\n")
