@@ -4,7 +4,6 @@ import os
 
 def main():
     #menu()
-    
     textoPrincipal = "hola hola mi nombre es kevin"
 
     #Creamos y almacenamos los textos en una lista
