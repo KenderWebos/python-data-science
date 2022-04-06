@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import imp
 import os
 import sys
@@ -10,8 +11,8 @@ def main():
     #Creamos y almacenamos los textos en una lista
     pdf = "El_Arbol_De_La_Colina.txt"
     mainTextList = list()
-    path = "tarea_1/archivosDeTesteo/Libros_txt_utf-8/"
-    mainTextList.append( open(path+pdf).read() )
+    path = "../archivosDeTesteo/Libros_txt_utf-8/"
+    mainTextList.append( open(rutaFile()).read() )
     print(mainTextList)
 
     # makeSpace()
@@ -42,16 +43,12 @@ cambiar una palabra en el texto, OK
 def makeSpace():
     print("--------------------------------------------------------------------------------")
 
-def lectura_arg(p):
-    pdf = str(sys.argv[1])
-    print(p+pdf)
-    f = open(p+pdf)
-    dato = f.readline(1)
-    linea = f.readline()
-    while linea != "":
-        print(linea)
-        linea = f.readline()
-    print(dato)
+def rutaFile():
+    ruta= "../archivosDeTesteo/Libros_txt_utf-8/"
+
+    doc = str(sys.argv[1])
+    return ruta+doc
+    
   
 def get_cantidadDeLineas(mainText):
     allLines = mainText.split("\n")
