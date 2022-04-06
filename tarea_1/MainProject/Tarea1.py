@@ -2,18 +2,19 @@
 import sys
 import os
 
+mainTextList = list()
 def main():
-    menu()
+    #menu()
     textoPrincipal = "hola hola mi nombre es kevin"
 
     #Creamos y almacenamos los textos en una lista
     pdf = "El_Arbol_De_La_Colina.txt"
-    mainTextList = list()
+    
     path = "../archivosDeTesteo/Libros_txt_utf-8/"
     ruta = rutaFile()
     mainTextList.append( open(ruta).read() )
     print(mainTextList)
-    print(len(mainTextList))
+    print(get_cantidadDeLineas(mainTextList[0]))
 
     # makeSpace()
     # print(get_cantidadDeLineas(textoPrincipal))
@@ -50,8 +51,12 @@ def rutaFile():
     return ruta+doc
   
 def get_cantidadDeLineas(mainText):
+    n_lines =0
     allLines = mainText.split("\n")
-    return len(allLines)
+    for line in allLines:
+        if line != "":
+            n_lines= n_lines+1
+    return n_lines
 
 def get_cantidadDePalabras(mainText):
     allWords = mainText.split(" ")
@@ -133,6 +138,7 @@ def menu():
 
         os.system("cls")
         if(response == "1"):
+            get_cantidadDeLineas(mainTextList[0])
             print("seleccionaste la opcion 1")
             alert("esto ocurre cuando se realiza la funcion get_cantidadDeLineas")
 
