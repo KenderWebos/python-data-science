@@ -3,7 +3,7 @@ import sys
 import os
 
 def main():
-    #menu()
+    menu()
     textoPrincipal = "hola hola mi nombre es kevin"
 
     #Creamos y almacenamos los textos en una lista
