@@ -1,30 +1,22 @@
+#Procesado de texto con python
+#Licencia MIT
+#Copyright (c) 2020, Kevin C. Pablo B.
+
 # -*- coding: utf-8 -*-
 import sys
 import os
 
 mainTextList = list()
 def main():
-    #menu()
-    textoPrincipal = "hola hola mi nombre es kevin"
-
-    #Creamos y almacenamos los textos en una lista
-    pdf = "El_Arbol_De_La_Colina.txt"
     
+    #Creamos y almacenamos los textos en una lista
+
+    #pdf = "El_Arbol_De_La_Colina.txt"
     path = "../archivosDeTesteo/Libros_txt_utf-8/"
     ruta = rutaFile()
     mainTextList.append( open(ruta).read() )
-    print(mainTextList)
-    print(get_cantidadDeLineas(mainTextList[0]))
 
-    # makeSpace()
-    # print(get_cantidadDeLineas(textoPrincipal))
-    # print(get_cantidadDePalabras(textoPrincipal))
-    # print(get_cantidadDePalabrasNoRepetidas(textoPrincipal))
-    # print(get_cantidadDeCaracteresConEspacio(textoPrincipal))
-    # print(get_cantidadDeCaracteresSinEspacio(textoPrincipal))
-    # makeSpace()
-    # print(get_cantidadDeVecesQueSeRepitioUnaPalabra("Hola", textoPrincipal))
-    # print(changeWordInText("kevin", "pablo", textoPrincipal))
+    menu()
 
 
 # ｡☆✼★━━━━━━  TO DO  ━━━━━━★✼☆｡
@@ -91,24 +83,18 @@ def get_cantidadDeVecesQueSeRepitioUnaPalabra(wordToFind, mainText):
     #queriamos hacer que contara las palabras antes de quitar una en especifico y ver cuando da la resta
 
 def changeWordInText(wordToChange, newWorld, mainText):
-    a = mainText.replace(wordToChange, newWorld) #a =
+    wordToChange = " " + wordToChange + " "
+    newWorld = " " + newWorld + " "
+    a = mainText.replace(wordToChange, newWorld)
     return a
 
 def limpiarTexto(text):
-    characters = ",;:.\n!\"'"
+    #quite el /n de characters
+    characters = ",;:.!\"'"
     for character in characters:
         text = text.replace(character, "")
-        text.upper()
+        #text = text.upper()
     return text
-
-# def alert(text):
-#     aux = "─"
-#     fix = aux*(int(len(text)/2))
-#     print(f"┌{fix*2} •✧✧• {fix*2}┐")
-#     #print(f"-{fix}ALERTA{fix}- ")
-#     print(f"    {fix + text + fix}")
-#     print(f"└{fix*2} •✧✧• {fix*2}┘")
-#     print("")
 
 def alert(text):
     aux = "─"
@@ -121,6 +107,8 @@ def alert(text):
 
 def menu():
     
+    mainTextList[0] = limpiarTexto(mainTextList[0])
+
     while(True):
         os.system("cls")
         print("")
@@ -130,24 +118,44 @@ def menu():
         print("｡☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡")
         print("")
 
-        alert("esta funcion puede mostrar textos de alerta para el usuario")
-        alert("me encanta esta funcion porque puedo mostrar contenido que se ve graficamente")
-        alert("pero tiene un pequeño bug")
-
         response = input("Ingrese una opcion: ")
 
         os.system("cls")
         if(response == "1"):
-            get_cantidadDeLineas(mainTextList[0])
-            print("seleccionaste la opcion 1")
-            alert("esto ocurre cuando se realiza la funcion get_cantidadDeLineas")
+            alert("la cantidad de lineas del texto es:")
+            print(get_cantidadDeLineas(mainTextList[0]), "\n")
 
-        if(response == "2"):
-            print("seleccionaste la opcion 2")
-            alert("esto ocurre cuando se realiza la funcion get_cantidadDeLineas")    
+        if(response == "2"): 
+            alert("la cantidad de palabras repetidas es:")
+            print( get_cantidadDePalabras(mainTextList[0]), "\n" )
+
+        if(response == "3"):
+            alert("la cantidad de palabras no repetidas es:")
+            print( get_cantidadDePalabrasNoRepetidas(mainTextList[0]) )
+
+        if(response == "4"):
+            alert("la cantidad de caracteres con espacio es:")
+            print( get_cantidadDeCaracteresConEspacio(mainTextList[0]) )
+        
+        if(response == "5"):
+            alert("la cantidad de caracteres sin espacio es:")
+            print( get_cantidadDeCaracteresSinEspacio(mainTextList[0]) )
+
+        if(response == "6"):
+            wordToFind = input("Ingrese la palabra a buscar: ")
+            alert("la cantidad de veces que se repite una palabra es:")
+            print( get_cantidadDeVecesQueSeRepitioUnaPalabra(wordToFind, mainTextList[0]) ) 
+
+        if(response == "7"):
+            wordToChange = input("Ingrese la palabra a cambiar: ")
+            newWorld = input("Ingrese la nueva palabra: ")
+            alert("el texto con la palabra cambiada es:")
+            print( changeWordInText(wordToChange, newWorld, mainTextList[0]) )
 
         if(response == "8"):
             os.system("cls")
+            alert("Saliendo...")
+            os.system("pause")
             return
 
         response = input("quieres realizar otra accion? (si/no): ")
