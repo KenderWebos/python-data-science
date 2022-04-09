@@ -15,8 +15,7 @@ La aplicacion se trata de un gestor con el cual puedes saber alguna informacion 
 
 ### Uso del programa
 
-Al correr el programa por consola recibira como parametro de entrada un archivo (.txt) el cual sera utilizado en la ejecucion,
-una vez iniciado se desplegara un menu con las siguientes opciones.
+Al correr el programa por consola recibira como parametro de entrada un archivo (.txt) el cual sera utilizado en la ejecucion
 
 -----
 
@@ -24,9 +23,33 @@ python Tarea1.py El_Arbol_De_La_Colina.txt
 
 -----
 
+una vez iniciado se desplegara un menu con las siguientes opciones.
+
+｡☆✼★━━━━━━  MENU DE OPCIONES  ━━━━━━★✼☆｡
+
+Que deseas hacer?
+ 1.- Ver cantidad de lineas
+ 2.- Ver cantidad de palabras
+ 3.- Ver cantidad de palabras no repetidas
+ 4.- Ver cantidad de caracteres con espacio
+ 5.- Ver cantidad de caracteres sin espacio
+ 6.- Ver cantidad de veces que se repite una palabra
+ 7.- Cambiar una palabra en un texto
+ 8.- Salir
+
+｡☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡
+
+Luego de realizar cualquier opcion sin incluir la de salir, el programa pregunta al usuario si quiere realizar otra accion, finalmente si seleccionas que no quieres realizar otra opcion el programa se intentara finalizar.
+
 ```python
 
-print("hola mundo")
+def limpiarTexto(text):
+    #quite el /n de characters
+    characters = ",;:.!\"'"
+    for character in characters:
+        text = text.replace(character, "")
+        #text = text.upper()
+    return text
 
 ```
 -----
