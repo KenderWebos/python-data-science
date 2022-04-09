@@ -1,4 +1,0 @@
-hola mi nombre es kevin
-y esto
-esto es
-una prueba de leer texto en python
