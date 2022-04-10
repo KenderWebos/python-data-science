@@ -27,15 +27,15 @@ una vez iniciado se desplegara un menu con las siguientes opciones.
 
 ｡☆✼★━━━━━━  MENU DE OPCIONES  ━━━━━━★✼☆｡
 
-Que deseas hacer?
- 1.- Ver cantidad de lineas
- 2.- Ver cantidad de palabras
- 3.- Ver cantidad de palabras no repetidas
- 4.- Ver cantidad de caracteres con espacio
- 5.- Ver cantidad de caracteres sin espacio
- 6.- Ver cantidad de veces que se repite una palabra
- 7.- Cambiar una palabra en un texto
- 8.- Salir
+Que deseas hacer?  
+ 1.- Ver cantidad de lineas  
+ 2.- Ver cantidad de palabras  
+ 3.- Ver cantidad de palabras no repetidas  
+ 4.- Ver cantidad de caracteres con espacio  
+ 5.- Ver cantidad de caracteres sin espacio  
+ 6.- Ver cantidad de veces que se repite una palabra  
+ 7.- Cambiar una palabra en un texto  
+ 8.- Salir  
 
 ｡☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡
 
