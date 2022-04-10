@@ -41,6 +41,11 @@ Que deseas hacer?
 
 Luego de realizar cualquier opcion sin incluir la de salir, el programa pregunta al usuario si quiere realizar otra accion, finalmente si seleccionas que no quieres realizar otra opcion el programa se intentara finalizar.
 
+
+｡☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡
+
+La funcion que permite limpiar el texto de caracteres o simbolos que perjudican el analisis descriptivo del texto es la sguiente:
+
 ```python
 
 def limpiarTexto(text):
