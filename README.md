@@ -41,6 +41,14 @@ Que deseas hacer?
 
 Luego de realizar cualquier opcion sin incluir la de salir, el programa pregunta al usuario si quiere realizar otra accion, finalmente si seleccionas que no quieres realizar otra opcion el programa se intentara finalizar.
 
+｡☆✼★━━━━━━━━━━━━━━━ Ejemplo de uso ━━━━━━━━━━━━━━━━━★✼☆｡
+
+![Image text](https://github.com/KenderWebos/PythonDataScience_Cource/blob/main/tarea_1/image/1.png)  
+
+Luego al selecionar la opcion 1, el programa desplegara la respuesta en pantalla y ademas pregunta si quieres realizar otra accion.  
+
+![Image text](https://github.com/KenderWebos/PythonDataScience_Cource/blob/main/tarea_1/image/2.png)  
+
 
 ｡☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡
 
