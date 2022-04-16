@@ -1,0 +1,1 @@
+python Tarea2.py
