@@ -1,1 +1,4 @@
-null
+si es mayor al 30% los borro la columna
+
+si es menor al 30% tomar la decision borrar la fila, que valor tienen las demas filas. 
+cambiar por moda si las otras filas son valiosas 
