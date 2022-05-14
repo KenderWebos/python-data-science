@@ -1,5 +1,10 @@
 # PythonDataScience_Cource
 
+Links de referencia
+
+https://github.com/KenderWebos/PythonDataScience_Cource/tree/main/tarea_1
+https://github.com/KenderWebos/PythonDataScience_Cource/tree/main/tarea_2
+
 - Proyecto procesamiento de textos con python nativo
   - Introduccion
   - uso del programa
@@ -53,16 +58,4 @@ Luego al selecionar la opcion 1, el programa desplegara la respuesta en pantalla
 ｡☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡
 
 La funcion que permite limpiar el texto de caracteres o simbolos que perjudican el analisis descriptivo del texto es la sguiente:
-
-```python
-
-def limpiarTexto(text):
-    #quite el /n de characters
-    characters = ",;:.!\"'"
-    for character in characters:
-        text = text.replace(character, "")
-        #text = text.upper()
-    return text
-
-```
 -----
