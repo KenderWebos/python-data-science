@@ -1,0 +1,1 @@
+python Tarea1.py El_Arbol_De_La_Colina.txt
